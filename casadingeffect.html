@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cascading Effect</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #222;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      animation: cascade 1s ease-in-out forwards;
+    }
+
+    .box {
+      width: 150px;
+      height: 50px;
+      margin: 10px;
+      background: #ff4444;
+      border-radius: 10px;
+      opacity: 0;
+      transform: translateY(-50px);
+      animation: cascade 0.8s ease-in-out forwards;
+    }
+
+    /* Cascade effect */
+    .box:nth-child(1) { animation-delay: 0.3s; }
+    .box:nth-child(2) { animation-delay: 0.6s; }
+    .box:nth-child(3) { animation-delay: 0.9s; }
+    .box:nth-child(4) { animation-delay: 1.2s; }
+
+    @keyframes cascade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Cascading Effect ✨</h1>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+</body>
+</html>
