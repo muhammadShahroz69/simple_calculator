@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiplication Function</title>
+  </head>
+  <body>
+    <h2>Multiplication using Function</h2>
+
+    <p>Enter two numbers:</p>
+
+    <input id="num1" placeholder="First number">
+    <input id="num2" placeholder="Second number">
+    <button onclick="calculate()">Multiply</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+      // Function for multiplication
+      function multiply(a, b) {
+        return a * b;
+      }
+
+      // Function to take input and display result
+      function calculate() {
+        var n1 = document.getElementById("num1").value;
+        var n2 = document.getElementById("num2").value;
+
+        var result = multiply(n1, n2); // function call
+        document.getElementById("result").innerHTML = 
+          "Result = " + result;
+      }
+    </script>
+  </body>
+</html>
