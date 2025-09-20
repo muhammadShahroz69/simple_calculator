@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <button onclick="print()">click on this button</button>
+    <br/>
+    <button onclick="checknumber(5)">check number is 5</button>
+    <button onclick="myfunction()">click me</button>
+    <h1 style="color:blue">BMW M5</h1>"
+    <p id="demo"></p>
+    <script>
+      function add(){
+        c=74;
+        e=300;
+        z=c+e;
+
+        document.write("</br>the sum is" + z)
+        
+      }
+
+      add();  //calling the function
+
+      function substraction(){
+        c=10
+        d=59
+        e=c-d
+        document.write("</br>the sub is" + e)
+      }
+      substraction();  //calling the function
+
+      //parameterized function
+
+
+        function sum(a,b){
+       z=a+b;
+            document.write("</br>the sum is" + z)
+          
+        }
+        sum(10,35);
+
+      function sub(a,b){
+        z=a-b;
+        document.write("</br>the sub is" + z)
+      }
+      sub(162,56);
+
+      function print(){
+        document.writeln("hello world");
+      }
+      function checknumber(number){
+        if(number==5)
+        {
+          document.write("</br>the number is 5")
+          
+        }
+        else{
+          document.writeln("</br>the number is not 5")
+        }
+      }
+      function myfunction(){
+        var b=47;
+        document.getElementById("demo").innerHTML="the number is this " +(b+7);
+        
+      }
+      var result= function (a,b){
+        return a*b;
+        document.write("</br>the result is" + result(5,6));
+      }
+    </script>
+  </body>
+</html>
