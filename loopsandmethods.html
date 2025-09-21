@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>String & Loop Project</title>
+  </head>
+  <body>
+    <h1 class="title">JavaScript Project</h1>
+    <p id="demo"></p>
+
+    <script>
+    
+      function stringWork() {
+        var firstName = "Fardeen";
+        var lastName = "Ali";
+        var word = "Programming";
+
+        document.write(firstName + "<br/>");
+        document.write(firstName.toUpperCase() + "<br/>");
+        document.write(lastName.toLowerCase() + "<br/>");
+        document.write(word.startsWith("Pro") + "<br/>");
+        document.write(word.endsWith("ing") + "<br/>");
+
+        
+        var sentence = "JavaScript is powerful";
+        var check = /powerful/;
+        document.write(check.test(sentence) + "<br/>");
+
+        
+        var email = "example@yahoo.com";
+        var checkMail = /yahoo.com/;
+        document.write(checkMail.test(email) + "<br/>");
+
+        
+        for (var i = 1; i <= 5; i++) {
+          document.write("BMW M5 COMPETITION: " + i + "<br/>");
+        }
+
+        
+        var colors = ["red", "blue", "green", "yellow"];
+        var output = "";
+        for (var j = 0; j < colors.length; j++) {
+          output += colors[j] + "<br/>";
+        }
+        document.getElementById("demo").innerHTML = output;
+
+        
+        var today;
+        switch (new Date().getDay()) {
+          case 0: today = "Sunday"; break;
+          case 1: today = "Monday"; break;
+          case 2: today = "Tuesday"; break;
+          case 3: today = "Wednesday"; break;
+          case 4: today = "Thursday"; break;
+          case 5: today = "Friday"; break;
+          case 6: today = "Saturday"; break;
+        }
+        document.write("<br/>" + today);
+      }
+
+      stringWork();
+    </script>
+  </body>
+</html>
