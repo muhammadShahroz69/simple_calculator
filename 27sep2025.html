@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+      // object
+      var person = {
+        firstName: "Arham",
+        lastName: "Asif",
+        age: 15,
+        marks: 10,
+      };
+     
+      document.getElementById("demo").innerHTML =
+         "Person first name is " + person.firstName +
+         ", person age is " + person.age +
+         ", person marks are " + person.marks;
+
+      // Math functions
+      var value = Math.abs(20);
+      document.write("the absolute value " + value + "<br>");
+      value = Math.acos(-1);
+      document.write("the acos " + value + "<br>");
+      value = Math.asin(1);
+      document.write("the asin " + value + "<br>");
+      value = Math.atan(0.5);
+      document.write("the atan " + value + "<br>");
+
+      // Fixed function
+      function findMax() {
+        var i, max = 9; 
+        for (i = 0; i < arguments.length; i++) {
+          if (arguments[i] > max) {
+            max = arguments[i];
+          }
+        }
+        return max;
+      }
+
+      document.getElementById("demo2").innerHTML =
+        "The highest number is " + findMax(1,2,3,4,5,6,7,8,9,10);
+    </script>
+  </body>
+</html>
