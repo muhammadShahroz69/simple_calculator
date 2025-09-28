@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="first"></p>
+    <p id="second"></p>
+    <p id="third"></p>
+    <p id="fourth"></p>
+    
+    <script>
+      // Activity 01
+      var cars = ["BMW","Toyota","1 headlight","1.8","white"];
+      document.write(cars.join(", ") + "<br/>"); // show all cars
+      document.write(cars[0] + "<br/>");         // first item
+      document.write(cars[4] + "<br/>");         // last item
+      document.getElementById("demo").innerHTML = cars[3];
+
+      // Activity 02
+      var fruits = ["apple","orange","banana","mango","grapes"];
+      document.getElementById("first").innerHTML = fruits.join(" * ");
+      document.getElementById("second").innerHTML = fruits.pop(); // removes last element
+      document.getElementById("third").innerHTML = "The whole array is " + fruits;
+
+      // Activity 03
+      function add(a, b) {
+        return a + b;
+      }
+      function average(a, b) {
+        return add(a, b) / 2;
+      }
+      var result = average(23, 69);
+      document.getElementById("fourth").innerHTML = "The average is " + result;
+
+      // Activity 04
+      var numbers = [14, 27, 35, 47, 50];
+      for (var i = 0; i < numbers.length; i++) {
+        document.write("<br/>" + numbers[i]);
+      }
+    </script>
+  </body>
+</html>
