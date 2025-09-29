@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <h2>Object and Arrays Example</h2>
+
+    <p id="demo"></p>
+    <p id="first"></p>
+    <p id="second"></p>
+    <p id="third"></p>
+    <p id="fourth"></p>
+    
+    <script>
+      // Activity 01: Object
+      var student = {
+        firstName: "Arham",
+        lastName: "Asif",
+        age: 15,
+        grade: "9th"
+      };
+
+      document.getElementById("demo").innerHTML =
+        "Student: " + student.firstName + " " + student.lastName +
+        " | Age: " + student.age + " | Grade: " + student.grade;
+
+      // Activity 02: Arrays
+      var fruits = ["apple","orange","banana","mango","grapes"];
+      document.getElementById("first").innerHTML =
+        "Fruits: " + fruits.join(" * ");
+      document.getElementById("second").innerHTML =
+        "Last fruit removed: " + fruits.pop();
+      document.getElementById("third").innerHTML =
+        "Updated Fruits: " + fruits;
+
+      // Activity 03: Functions with numbers
+      function add(a, b) {
+        return a + b;
+      }
+      function average(a, b) {
+        return add(a, b) / 2;
+      }
+      var result = average(23, 69);
+      document.getElementById("fourth").innerHTML =
+        "The average of 23 and 69 is: " + result;
+
+      // Activity 04: Loop through array
+      var numbers = [14, 27, 35, 47, 50];
+      for (var i = 0; i < numbers.length; i++) {
+        document.write("<br/>Number: " + numbers[i]);
+      }
+    </script>
+  </body>
+</html>
