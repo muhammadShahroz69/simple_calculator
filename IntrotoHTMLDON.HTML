@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to HTML DOM</title>
+  </head>
+  <body>
+
+    <h1>Introduction to HTML DOM</h1>
+
+    <!-- Section 1 -->
+    <h2>Changing Content</h2>
+    <p id="demo">Hello World</p>
+    <button onclick="changeText()">Change Text</button>
+
+    <!-- Section 2 -->
+    <h2>Simple Function</h2>
+    <p id="demo2">Click button to calculate</p>
+    <button onclick="add()">Add Numbers</button>
+
+    <!-- Section 3 -->
+    <h2>Form Validation Example</h2>
+    <form id="loginform" onsubmit="validate(event)">
+      <label>Enter Name:</label>
+      <input type="text" id="name" placeholder="Enter name"><br><br>
+
+      <label>Enter Email:</label>
+      <input type="email" id="Email" placeholder="Enter email"><br><br>
+
+      <label>Enter Password:</label>
+      <input type="password" id="password" placeholder="Enter password"><br><br>
+
+      <label>Enter Age:</label>
+      <input type="number" id="age" placeholder="Enter age"><br><br>
+
+      <button type="submit">Login</button>
+    </form>
+    <p id="msg"></p>
+
+    <!-- Section 4 -->
+    <h2>Show / Hide Example</h2>
+    <p id="toggleText">This text can be hidden or shown using DOM.</p>
+    <button onclick="toggle()">Toggle Text</button>
+
+    <script>
+      // Change content example
+      function changeText() {
+        document.getElementById("demo").innerHTML = "Bye World 👋";
+      }
+
+      // Simple add function
+      function add(){
+        var a = 6;
+        document.getElementById("demo2").innerHTML = "6 + 6 = " + (a + a);
+      }
+
+      // Form validation
+      function validate(e){
+        e.preventDefault(); // stop refresh
+
+        var name = document.getElementById("name").value;
+        var Email = document.getElementById("Email").value;
+        var password = document.getElementById("password").value;
+        var age = document.getElementById("age").value;
+        var msg = document.getElementById("msg");
+
+        let message = "";
+
+        if(name === ""){
+          message = "Please enter name";
+        }
+        else if(Email === ""){
+          message = "Please enter email";
+        }
+        else if(password === ""){
+          message = "Please enter password";
+        }
+        else if(age === ""){
+          message = "Please enter age";
+        }
+        else{
+          message = "Login successful ✅";
+        }
+        msg.innerHTML = message;
+      }
+
+      // Show / hide toggle
+      function toggle(){
+        var text = document.getElementById("toggleText");
+        if(text.style.display === "none"){
+          text.style.display = "block";
+        } else {
+          text.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
