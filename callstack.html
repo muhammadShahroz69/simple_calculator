@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+  </head>
+  <body>
+    <h2>Object, Arrays, and Call Stack Example</h2>
+
+    <p id="demo"></p>
+    <p id="first"></p>
+    <p id="second"></p>
+    <p id="third"></p>
+    <p id="fourth"></p>
+    <p id="fifth"></p>
+
+    <script>
+      // Activity 01: Object
+      var student = {
+        name: "Arham",
+        age: 15,
+        class: "9th",
+        favSubject: "Computer"
+      };
+
+      document.getElementById("demo").innerHTML =
+        "Student Name: " + student.name + 
+        " | Age: " + student.age + 
+        " | Class: " + student.class + 
+        " | Favorite Subject: " + student.favSubject;
+
+      // Activity 02: Array
+      var games = ["Cricket", "Football", "Hockey", "Tennis"];
+      document.getElementById("first").innerHTML = "Games: " + games.join(", ");
+      games.push("Volleyball");
+      document.getElementById("second").innerHTML = "After adding: " + games;
+
+      // Activity 03: Simple Function + Call Stack Example
+      function greetUser() {
+        return "Hello from greetUser()";
+      }
+
+      function showMessage() {
+        var message = greetUser(); // function calling another function (Call Stack)
+        return message + " and Welcome to JavaScript DOM!";
+      }
+
+      var output = showMessage(); // top-level function call
+      document.getElementById("third").innerHTML = output;
+
+      // Activity 04: Loop
+      var numbers = [5, 10, 15, 20];
+      for (var i = 0; i < numbers.length; i++) {
+        document.write("<br/>Number: " + numbers[i]);
+      }
+
+      // Activity 05: Call Stack Explanation
+      document.getElementById("fifth").innerHTML =
+        "<br/>Call Stack Steps:<br/>" +
+        "1️⃣ showMessage() is called<br/>" +
+        "2️⃣ It calls greetUser()<br/>" +
+        "3️⃣ greetUser() runs and returns a message<br/>" +
+        "4️⃣ showMessage() continues and adds text<br/>" +
+        "5️⃣ Final result shown ✅";
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
