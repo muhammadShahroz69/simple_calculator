@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Printing Numbers Project</title>
+  </head>
+  <body>
+    <h2>Project: Printing Numbers</h2>
+
+    <script>
+      // Variables
+      var start = 1;
+      var end = 10;
+      var sum = 0;
+      var text = "";
+
+      document.write("<b>Printing numbers from " + start + " to " + end + ":</b><br/>");
+
+      // While loop for printing numbers
+      var i = start;
+      while (i <= end) {
+        text += i + "<br/>";
+        sum += i;
+        i++;
+      }
+
+      document.write(text);
+
+      // Function to show total
+      function showTotal(total) {
+        document.write("<b>Sum of numbers = " + total + "</b><br/>");
+        if (total > 30) {
+          document.write("That’s a big number!");
+        } else {
+          document.write("That’s a small number!");
+        }
+      }
+
+      // Call function
+      showTotal(sum);
+    </script>
+  </body>
+</html>
