@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+  </head>
+  <body>
+    <button type="button" onclick="ascending()">Ascending Order</button>
+    <button type="button" onclick="descending()">Descending Order</button>
+    <button type="button" onclick="evaluateResult()">Evaluate</button>
+
+    <p id="result"></p>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+      // Array declaration
+      var points = [20, 37, 48, 49, 29, 30, 58, 99, 69];
+      document.getElementById("result").innerHTML = points;
+
+      // Ascending function
+      function ascending() {
+        points.sort(function(a, b) { return a - b; });
+        document.getElementById("result").innerHTML = points;
+      }
+
+      // Descending function
+      function descending() {
+        points.sort(function(a, b) { return b - a; });
+        document.getElementById("result").innerHTML = points;
+      }
+
+      // Map function 1
+      function myFunction(num) {
+        return num * 69;
+      }
+      document.getElementById("demo").innerHTML = points.map(myFunction);
+
+      // Map function 2
+      var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      function square(num) {
+        return num * num;
+      }
+      document.getElementById("demo").innerHTML += "<br/>Squares: " + numbers.map(square);
+
+      // Evaluate function
+      function evaluateResult() {
+        var x = 10;
+        var y = 20;
+        var c = 30;
+        var a = eval("x - y");
+        var b = eval("y * x");
+        var d = eval("y + x");
+        var e = eval("2 + 2");
+        var res = a + b + d + e - c;
+        document.getElementById("demo2").innerHTML = "Result: " + res;
+      }
+    </script>
+  </body>
+</html>
