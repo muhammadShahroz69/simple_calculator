@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HELLO WORLD</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="result"></p>
+    <p id="cal"></p>
+
+    <script>
+      // Variable types
+      var marks = 16;
+      document.write(typeof(marks)); // number
+
+      var name = "Obito";
+      document.write("<br/>");
+      document.write(typeof(name)); // string
+
+      var fruit = ["apple", "banana", "cherry", "kiwi"];
+      document.write("<br/>");
+      document.write(typeof(fruit)); // object (arrays are objects in JS)
+
+      // Number conversion
+      var x = 69;
+      var y = 70;
+      var data1 = "123";
+      document.write("<br/>");
+
+      // Convert string to number and add 2
+      document.getElementById("result").innerHTML = Number(data1) + 2;
+
+      // Simple addition and string concatenation
+      document.getElementById("demo").innerHTML = x + y;
+      document.getElementById("demo1").innerHTML = String(x) + String(y);
+
+      // Try...catch example
+      try {
+        addalert("welcome"); // this will throw an error
+      } catch (error) {
+        document.write("<br/>Error: " + error.message);
+      }
+
+      // Normal and Arrow function example
+      function add(a, b) {
+        return a + b;
+      }
+
+      add = (a, b) => a + b;
+
+      document.getElementById("cal").innerHTML = "Sum using arrow function: " + add(12, 11);
+    </script>
+  </body>
+</html>
