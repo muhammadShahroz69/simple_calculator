@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HELLO WORLD</title>
+  </head>
+  <body>
+    <h2>Object, JSON, Async, Promise & Callback Example</h2>
+    <p id="result"></p>
+    <p id="promise"></p>
+    <p id="call"></p>
+
+    <script>
+      // Activity 01 — Object & JSON
+      var myobj = { name: "Obito", age: 15, grade: "PC" };
+      document.write("<b>Original Object:</b><br>");
+      document.write(myobj.name + "<br>");
+      document.write(myobj.age + "<br>");
+      document.write(myobj.grade + "<br><br>");
+
+      var mystring = JSON.stringify(myobj);
+      document.write("<b>JSON String:</b> " + mystring + "<br><br>");
+
+      var secondobject = JSON.parse(mystring);
+      document.write("<b>Parsed Object:</b> " + secondobject.name + " " + secondobject.age + " " + secondobject.grade + "<br><br>");
+
+      // Activity 02 — Async/Await
+      async function add(a, b) {
+        let response = await (a + b);
+        display(response);
+      }
+
+      function display(result) {
+        document.getElementById("result").innerHTML = "Async/Await Result: " + result;
+      }
+
+      add(10, 69);
+
+      // Activity 03 — Promise Example
+      function displayer(data) {
+        document.getElementById("promise").innerHTML = "Promise Result: " + data;
+      }
+
+      function sum(a, b) {
+        var total = a + b;
+        displayer(total);
+      }
+
+      let promise = new Promise(function (myresolve, myreject) {
+        let x = 0;
+        if (x === 0) {
+          myresolve("OK");
+        } else {
+          myreject("Error");
+        }
+      });
+
+      promise.then(
+        function () { sum(69, 69); },
+        function (error) { displayer(error); }
+      );
+
+      // Activity 04 — Callback Function
+      function calculate(num1, num2, mycallback) {
+        let sum = num1 + num2;
+        mycallback(sum);
+      }
+
+      function calldisplayer(data) {
+        document.getElementById("call").innerHTML = "Callback Result: " + data;
+      }
+
+      calculate(69, 69, calldisplayer);
+    </script>
+  </body>
+</html>
